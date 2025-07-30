@@ -180,10 +180,8 @@
 
     <!-- JavaScript for fetching data and animating the total -->
     <script>
-        // ====================================================================================
-        // The placeholder URL has been replaced with your live Google Sheet link.
-        // ====================================================================================
-        const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSPeAHz8TtmdotclMBHxEt22hn5-KdII-9Fh_hy636XUcxqmSjN5f0lfYhrGP87MXvsU03ThAAWMsck/pub?gid=0&single=true&output=csv';
+        // Your live "SUM-only" Google Sheet URL is connected.
+        const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSPeAHz8TtmdotclMBHxEt22hn5-KdII-9Fh_hy636XUcxqmSjN5f0lfYhrGP87MXvsU03ThAAWMsck/pub?gid=1404453510&single=true&output=csv';
         
         function animateValue(obj, start, end, duration) {
             let startTimestamp = null;
@@ -194,9 +192,7 @@
                 
                 obj.innerHTML = new Intl.NumberFormat('en-US', {
                     style: 'currency',
-                    currency: 'USD',
-                    minimumFractionDigits: 2, 
-                    maximumFractionDigits: 2
+                    currency: 'USD'
                 }).format(currentValue);
 
                 if (progress < 1) {
@@ -213,27 +209,24 @@
 
         function fetchData() {
             const totalElement = document.getElementById('total-raised');
-            
+
             fetch(sheetUrl)
                 .then(response => {
                     if (!response.ok) throw new Error('Network response was not ok');
                     return response.text();
                 })
                 .then(csvText => {
-                    const rows = csvText.split('\n').slice(1);
-                    let total = 0;
-                    rows.forEach(row => {
-                        const columns = row.split(',');
-                        // IMPORTANT: Assumes the 'Amount' is in the 3rd column (index 2).
-                        if (columns.length > 2) {
-                            const amount = parseFloat(columns[2]) / 100; 
-                            if (!isNaN(amount)) {
-                                total += amount;
-                            }
-                        }
-                    });
-                    
-                    animateValue(totalElement, 0, total, 1500);
+                    // FIX: Make the code more robust. It now takes the first line of the CSV
+                    // to ensure it only gets one number, even if the sheet has extra lines.
+                    const firstLine = csvText.split('\n')[0].trim();
+                    const totalInCents = parseFloat(firstLine);
+                    const totalInDollars = totalInCents / 100;
+
+                    if (!isNaN(totalInDollars)) {
+                        animateValue(totalElement, 0, totalInDollars, 1500);
+                    } else {
+                        throw new Error("Fetched data is not a number.");
+                    }
                 })
                 .catch(error => {
                     console.error('Error fetching or processing data:', error);
