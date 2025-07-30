@@ -205,13 +205,13 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const step = (timestamp) =&gt; {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (!startTimestamp) startTimestamp = timestamp;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const progress = Math.min((timestamp - startTimestamp) / duration, 1);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const currentValue = Math.floor(progress * (end - start) + start);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const currentValue = progress * (end - start) + start; // Use floating point for animation</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>obj.innerHTML = new Intl.NumberFormat('en-US', {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>style: 'currency',</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>currency: 'USD',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>minimumFractionDigits: 0,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>maximumFractionDigits: 0</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>minimumFractionDigits: 2, // Always show cents</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>maximumFractionDigits: 2</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}).format(currentValue);</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (progress &lt; 1) {</span></p>
@@ -241,8 +241,11 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const columns = row.split(',');</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// IMPORTANT: Assumes the 'Amount' is in the 3rd column (index 2).</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>if (columns.length &gt; 2) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const amount = parseFloat(columns[2]);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>if (!isNaN(amount)) total += amount;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>// The amount is now divided by 100 here to convert from cents to dollars</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const amount = parseFloat(columns[2]) / 100;<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>if (!isNaN(amount)) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>total += amount;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
 <p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
