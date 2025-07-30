@@ -7,11 +7,256 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2487.7">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
   </style>
 </head>
 <body>
-<p class="p1">Hi :)</p>
-<p class="p1">Hello :)</p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Support St. Jude - 50 States, 50 Days, 1 Mission&lt;/title&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Google Fonts for modern typography --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- Basic Setup &amp; Variables --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>:root {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--color-primary: #0056b3; /* St. Jude inspired blue */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--color-secondary: #1a2c4e; /* Darker blue for text */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--color-action: #28a745; /* Green for donation buttons */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--color-light-bg: #fdfdff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- Page Layout &amp; Background --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: var(--font-family);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--color-light-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--color-secondary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 40px 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- Main Content Container --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 700px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- Header Section --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.charity-name {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--color-primary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.main-headline {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: clamp(2em, 8vw, 3.5em); /* Responsive font size */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 900;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1.1; /* Adjust line height for two lines */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: -2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- Fundraising Total Section --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.total-section {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #ffffff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 30px rgba(0, 86, 179, 0.08);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#total-raised {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: clamp(3.5em, 15vw, 6em); /* Responsive font size */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 900;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--color-primary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.total-label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 1.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--color-primary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>opacity: 0.8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- Call to Action Button --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.cta-button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--color-action);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.4em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: transform 0.2s ease, box-shadow 0.2s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 25px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.cta-button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translateY(-3px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 7px 20px rgba(40, 167, 69, 0.4);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- Mission Section --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.mission-section {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 40px 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1.8;<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.2em;<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.mission-section strong {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--color-primary);<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* Style for the inspiration link */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.mission-section a {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--color-primary);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.mission-section a:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-decoration: underline;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- Footer Section --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>footer {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-top: 1px solid #e0e0e0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-top: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.footer-text {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="container" id="main-container"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- SECTION 1: The Hero --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="charity-name"&gt;A Fundraiser for St. Jude Children's Research Hospital®&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1 class="main-headline"&gt;50 STATES.&lt;br&gt;50 DAYS. 1 MISSION.&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;main&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;section class="total-section"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h2 id="total-raised"&gt;Loading...&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p class="total-label"&gt;Raised for St. Jude&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Donation link has been updated --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;a href="https://square.link/u/Fy4J7D6G" target="_blank" rel="noopener noreferrer" class="cta-button"&gt;DONATE NOW&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- SECTION 2: The Mission --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;section class="mission-section"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>100% inspired by &lt;a href="https://www.youtube.com/@ryan" target="_blank" rel="noopener noreferrer"&gt;Ryan Trahan&lt;/a&gt; and his wife Haley Pham (who raised over $10 million for charity), I am self-funding a journey to all 50 U.S. states in 50 days. I'm dedicating this mobile fundraiser to the incredible, life-saving work of St. Jude, &lt;strong&gt;because families never receive a bill for treatment, travel, housing, or food — so they can focus on helping their child live.&lt;/strong&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/main&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- SECTION 3: The Final Ask (Footer) --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="footer-text"&gt;Ready to be part of the mission?&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Donation link has been updated --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="https://square.link/u/Fy4J7D6G" target="_blank" rel="noopener noreferrer" class="cta-button"&gt;MAKE A DONATION&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- JavaScript for fetching data and animating the total --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// ====================================================================================</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// The placeholder URL has been replaced with your live Google Sheet link.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// ====================================================================================</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSPeAHz8TtmdotclMBHxEt22hn5-KdII-9Fh_hy636XUcxqmSjN5f0lfYhrGP87MXvsU03ThAAWMsck/pub?gid=0&amp;single=true&amp;output=csv';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function animateValue(obj, start, end, duration) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>let startTimestamp = null;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const step = (timestamp) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (!startTimestamp) startTimestamp = timestamp;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const progress = Math.min((timestamp - startTimestamp) / duration, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const currentValue = Math.floor(progress * (end - start) + start);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>obj.innerHTML = new Intl.NumberFormat('en-US', {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>style: 'currency',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>currency: 'USD',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>minimumFractionDigits: 0,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>maximumFractionDigits: 0</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}).format(currentValue);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (progress &lt; 1) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>window.requestAnimationFrame(step);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                     </span>obj.innerHTML = new Intl.NumberFormat('en-US', {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>style: 'currency',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>currency: 'USD'</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}).format(end);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>window.requestAnimationFrame(step);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function fetchData() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const totalElement = document.getElementById('total-raised');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>fetch(sheetUrl)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.then(response =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (!response.ok) throw new Error('Network response was not ok');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>return response.text();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.then(csvText =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const rows = csvText.split('\n').slice(1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>let total = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>rows.forEach(row =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const columns = row.split(',');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// IMPORTANT: Assumes the 'Amount' is in the 3rd column (index 2).</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>if (columns.length &gt; 2) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const amount = parseFloat(columns[2]);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>if (!isNaN(amount)) total += amount;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>animateValue(totalElement, 0, total, 1500);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.catch(error =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.error('Error fetching or processing data:', error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>totalElement.innerText = '$0.00';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', fetchData);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
 </body>
 </html>
