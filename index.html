@@ -183,25 +183,34 @@
         // Your live "SUM-only" Google Sheet URL is connected.
         const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSPeAHz8TtmdotclMBHxEt22hn5-KdII-9Fh_hy636XUcxqmSjN5f0lfYhrGP87MXvsU03ThAAWMsck/pub?gid=1404453510&single=true&output=csv';
         
-        function animateValue(obj, start, end, duration) {
+        function animateValue(obj, startInCents, endInCents, duration) {
             let startTimestamp = null;
             const step = (timestamp) => {
                 if (!startTimestamp) startTimestamp = timestamp;
                 const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const currentValue = progress * (end - start) + start;
+                
+                // Apply an "ease-out" function to the progress.
+                const easedProgress = 1 - Math.pow(1 - progress, 3);
+                
+                // Animate with integers (cents) to avoid floating point errors
+                const currentValueInCents = Math.floor(easedProgress * (endInCents - startInCents) + startInCents);
+                
+                // Convert to dollars only for the final display
+                const currentValueInDollars = currentValueInCents / 100;
                 
                 obj.innerHTML = new Intl.NumberFormat('en-US', {
                     style: 'currency',
                     currency: 'USD'
-                }).format(currentValue);
+                }).format(currentValueInDollars);
 
                 if (progress < 1) {
                     window.requestAnimationFrame(step);
                 } else {
+                     // Ensure the final value is exact
                      obj.innerHTML = new Intl.NumberFormat('en-US', {
                         style: 'currency',
                         currency: 'USD'
-                    }).format(end);
+                    }).format(endInCents / 100);
                 }
             };
             window.requestAnimationFrame(step);
@@ -216,14 +225,12 @@
                     return response.text();
                 })
                 .then(csvText => {
-                    // FIX: Make the code more robust. It now takes the first line of the CSV
-                    // to ensure it only gets one number, even if the sheet has extra lines.
                     const firstLine = csvText.split('\n')[0].trim();
                     const totalInCents = parseFloat(firstLine);
-                    const totalInDollars = totalInCents / 100;
 
-                    if (!isNaN(totalInDollars)) {
-                        animateValue(totalElement, 0, totalInDollars, 1500);
+                    if (!isNaN(totalInCents)) {
+                        // Pass the raw cent value to the animation function
+                        animateValue(totalElement, 0, totalInCents, 2000); 
                     } else {
                         throw new Error("Fetched data is not a number.");
                     }
